@@ -149,6 +149,7 @@ const translations = {
 
 function App() {
   const [language, setLanguage] = useState<Language>('en')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const t = translations[language]
 
@@ -211,12 +212,17 @@ function App() {
             <div className="logo-icon">K</div>
             <span>Kavithma</span>
           </div>
-          <ul className="nav-menu">
-            <li><a href="#home">{t.nav.home}</a></li>
-            <li><a href="#about">{t.nav.about}</a></li>
-            <li><a href="#skills">{t.nav.skills}</a></li>
-            <li><a href="#projects">{t.nav.projects}</a></li>
-            <li><a href="#contact">{t.nav.contact}</a></li>
+          <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+            <li><a href="#home" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</a></li>
+            <li><a href="#about" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a></li>
+            <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>{t.nav.skills}</a></li>
+            <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>{t.nav.projects}</a></li>
+            <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a></li>
           </ul>
           <div className="language-selector">
             <select value={language} onChange={(e) => setLanguage(e.target.value as Language)} className="lang-dropdown">

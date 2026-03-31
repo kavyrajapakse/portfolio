@@ -148,7 +148,6 @@ const translations = {
 }
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home')
   const [language, setLanguage] = useState<Language>('en')
 
   const t = translations[language]
@@ -213,11 +212,11 @@ function App() {
             <span>Kavithma</span>
           </div>
           <ul className="nav-menu">
-            <li><a href="#home" onClick={() => setActiveSection('home')}>{t.nav.home}</a></li>
-            <li><a href="#about" onClick={() => setActiveSection('about')}>{t.nav.about}</a></li>
-            <li><a href="#skills" onClick={() => setActiveSection('skills')}>{t.nav.skills}</a></li>
-            <li><a href="#projects" onClick={() => setActiveSection('projects')}>{t.nav.projects}</a></li>
-            <li><a href="#contact" onClick={() => setActiveSection('contact')}>{t.nav.contact}</a></li>
+            <li><a href="#home">{t.nav.home}</a></li>
+            <li><a href="#about">{t.nav.about}</a></li>
+            <li><a href="#skills">{t.nav.skills}</a></li>
+            <li><a href="#projects">{t.nav.projects}</a></li>
+            <li><a href="#contact">{t.nav.contact}</a></li>
           </ul>
           <div className="language-selector">
             <select value={language} onChange={(e) => setLanguage(e.target.value as Language)} className="lang-dropdown">

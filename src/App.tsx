@@ -26,7 +26,7 @@ const translations = {
     projects: {
       title: 'Featured Projects',
       ecommerce: 'E-Commerce Platform',
-      ecommerceDesc: 'Full-stack e-commerce application built with React and MySQL, featuring responsive UI and dynamic product management',
+      ecommerceDesc: 'Full-stack e-commerce application built with PHP and MySQL, featuring responsive UI and dynamic product management',
       thriftsstop: 'ThriftsStop',
       thriftsstopDesc: 'Backend Java e-commerce specialization using Servlets and Hibernate CRM, integrated with MySQL database management',
       wanderloom: 'Wanderloom',
@@ -157,7 +157,7 @@ function App() {
     {
       title: t.projects.ecommerce,
       desc: t.projects.ecommerceDesc,
-      tech: ['React', 'JavaScript', 'MySQL', 'Bootstrap'],
+      tech: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
       link: 'https://github.com/kavyrajapakse/E-commerce'
     },
     {
@@ -184,7 +184,7 @@ function App() {
     { category: 'Languages', items: ['Java', 'JavaScript', 'TypeScript'] },
     { category: 'Frontend', items: ['React', 'HTML/CSS', 'Bootstrap', 'Responsive Design'] },
     { category: 'Mobile', items: ['Android', 'React Native', 'Firebase'] },
-    { category: 'Backend', items: ['Spring Boot', 'Servlets', 'Hibernate/JPA'] },
+    { category: 'Backend', items: ['PHP','Spring Boot', 'Servlets', 'Hibernate/JPA'] },
     { category: 'Databases', items: ['MySQL', 'PostgreSQL'] },
     { category: 'DevOps', items: ['Git', 'GitHub', 'Docker basics'] }
   ]
